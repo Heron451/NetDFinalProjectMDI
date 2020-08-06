@@ -28,20 +28,22 @@ Partial Class aboutForm
 		'lblAbout
 		'
 		Me.lblAbout.AutoSize = True
-		Me.lblAbout.Location = New System.Drawing.Point(109, 63)
+		Me.lblAbout.Location = New System.Drawing.Point(228, 110)
+		Me.lblAbout.Margin = New System.Windows.Forms.Padding(10, 0, 10, 0)
 		Me.lblAbout.Name = "lblAbout"
-		Me.lblAbout.Size = New System.Drawing.Size(86, 65)
+		Me.lblAbout.Size = New System.Drawing.Size(258, 185)
 		Me.lblAbout.TabIndex = 0
 		Me.lblAbout.Text = "NETD-2202-01" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Final Project" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Robin Hammond" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
 		'
 		'aboutForm
 		'
-		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+		Me.AutoScaleDimensions = New System.Drawing.SizeF(19.0!, 37.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(340, 205)
+		Me.ClientSize = New System.Drawing.Size(731, 431)
 		Me.Controls.Add(Me.lblAbout)
-		Me.MaximumSize = New System.Drawing.Size(356, 244)
-		Me.MinimumSize = New System.Drawing.Size(356, 244)
+		Me.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
+		Me.MaximumSize = New System.Drawing.Size(767, 534)
+		Me.MinimumSize = New System.Drawing.Size(767, 534)
 		Me.Name = "aboutForm"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
 		Me.Text = "About"

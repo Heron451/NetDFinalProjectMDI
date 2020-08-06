@@ -30,7 +30,7 @@ Public Class ParentForm
 
 #Region "Event Handlers"
 	' NEW
-	Private Sub mnuNewClick(sender As Object, e As EventArgs) Handles mnuNew.Click
+	Private Sub mnuNewClick(sender As Object, e As EventArgs) Handles mnuNew.Click, tsbNewFile.Click
 		NewFile()
 		docLocation = String.Empty
 		lblStatus.Text = "New File Started"
@@ -50,40 +50,20 @@ Public Class ParentForm
 			lblStatus.Text = docName + " has been opened"
 		End If
 	End Sub
-	' SAVE NEEDS REWRITE
-	Private Sub mnuSaveClick(sender As Object, e As EventArgs) Handles mnuSave.Click
-		'Dim saveDialog As New SaveFileDialog
-		'Dim saveStream As StreamWriter
-		'Dim activeChild As ChildForm = DirectCast(Me.ActiveMdiChild, ChildForm)
-
+	' SAVE
+	Private Sub mnuSaveClick(sender As Object, e As EventArgs) Handles mnuSave.Click, tsbSaveFile.Click
 		saveDialog.Filter = "Txt Files| *.txt | All Files| *.*"
 
 		If docLocation = String.Empty Then
 			If saveDialog.ShowDialog() = DialogResult.OK Then
 				docLocation = saveDialog.FileName
 				FileSaved(docLocation)
-				lblStatus.Text = "File Saved Successfully - " & openDialog.FileName
+				lblStatus.Text = "File Saved Successfully - " + docName
 			End If
-
 		Else
 			FileSaved(docLocation)
-			lblStatus.Text = "File Saved Successfully - " & openDialog.FileName
+			lblStatus.Text = "File Saved Successfully - " + docName
 		End If
-
-
-
-
-
-		'If docLocation = String.Empty Then
-		'If saveDialog.ShowDialog = DialogResult.OK Then
-		'docLocation = saveDialog.FileName
-		'FileSaved(docLocation)
-		'lblStatus.Text = "File Saved Successfully - " & openDialog.FileName
-		'End If
-		'Else
-		'FileSaved(docLocation)
-		'lblStatus.Text = "File Saved Successfully - " & openDialog.FileName
-		'End If
 	End Sub
 	' SAVE AS
 	Private Sub mnuSaveAsClick(sender As Object, e As EventArgs) Handles mnuSaveAs.Click
@@ -170,9 +150,16 @@ Public Class ParentForm
 		newDocument.Show()
 	End Sub
 
+	Private Sub ParentFormChildActivate(sender As Object, e As EventArgs) Handles MyBase.MdiChildActivate
+		If Not Me.ActiveMdiChild Is Nothing Then
+			docLocation = Me.ActiveMdiChild.Text
+		End If
+	End Sub
+
+
+
+
+
 #End Region
-
-
-
 
 End Class

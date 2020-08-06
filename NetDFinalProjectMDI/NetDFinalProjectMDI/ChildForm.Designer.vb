@@ -44,7 +44,7 @@ Partial Class ChildForm
 		Me.Controls.Add(Me.txtDisplay)
 		Me.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
 		Me.Name = "ChildForm"
-		Me.Text = "Form1"
+		Me.Text = "Child Form"
 		Me.ResumeLayout(False)
 		Me.PerformLayout()
 

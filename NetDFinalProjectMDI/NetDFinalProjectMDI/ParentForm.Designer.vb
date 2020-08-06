@@ -48,8 +48,8 @@ Partial Class ParentForm
 		Me.saveDialog = New System.Windows.Forms.SaveFileDialog()
 		Me.ttpHelp = New System.Windows.Forms.ToolTip(Me.components)
 		Me.tlStrip = New System.Windows.Forms.ToolStrip()
+		Me.tsbNewFile = New System.Windows.Forms.ToolStripButton()
 		Me.tsbOpenFile = New System.Windows.Forms.ToolStripButton()
-		Me.tsbOpenFolder = New System.Windows.Forms.ToolStripButton()
 		Me.tsbSaveFile = New System.Windows.Forms.ToolStripButton()
 		Me.menuStrip.SuspendLayout()
 		Me.staStrip.SuspendLayout()
@@ -58,12 +58,13 @@ Partial Class ParentForm
 		'
 		'menuStrip
 		'
+		Me.menuStrip.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
 		Me.menuStrip.ImageScalingSize = New System.Drawing.Size(48, 48)
 		Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuWindows, Me.mnuHelp})
 		Me.menuStrip.Location = New System.Drawing.Point(0, 0)
 		Me.menuStrip.Name = "menuStrip"
 		Me.menuStrip.Padding = New System.Windows.Forms.Padding(19, 6, 0, 6)
-		Me.menuStrip.Size = New System.Drawing.Size(1404, 64)
+		Me.menuStrip.Size = New System.Drawing.Size(2006, 64)
 		Me.menuStrip.TabIndex = 0
 		Me.menuStrip.Text = "MenuStrip1"
 		'
@@ -201,10 +202,10 @@ Partial Class ParentForm
 		'
 		Me.staStrip.ImageScalingSize = New System.Drawing.Size(48, 48)
 		Me.staStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStatus})
-		Me.staStrip.Location = New System.Drawing.Point(0, 794)
+		Me.staStrip.Location = New System.Drawing.Point(0, 1063)
 		Me.staStrip.Name = "staStrip"
 		Me.staStrip.Padding = New System.Windows.Forms.Padding(3, 0, 44, 0)
-		Me.staStrip.Size = New System.Drawing.Size(1404, 63)
+		Me.staStrip.Size = New System.Drawing.Size(2006, 63)
 		Me.staStrip.TabIndex = 1
 		Me.staStrip.Text = "Welcome!"
 		'
@@ -226,53 +227,56 @@ Partial Class ParentForm
 		'tlStrip
 		'
 		Me.tlStrip.ImageScalingSize = New System.Drawing.Size(48, 48)
-		Me.tlStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbOpenFile, Me.tsbOpenFolder, Me.tsbSaveFile})
+		Me.tlStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbNewFile, Me.tsbOpenFile, Me.tsbSaveFile})
 		Me.tlStrip.Location = New System.Drawing.Point(0, 64)
 		Me.tlStrip.Name = "tlStrip"
 		Me.tlStrip.Padding = New System.Windows.Forms.Padding(0, 0, 10, 0)
-		Me.tlStrip.Size = New System.Drawing.Size(1404, 61)
+		Me.tlStrip.Size = New System.Drawing.Size(2006, 29)
 		Me.tlStrip.TabIndex = 2
 		Me.tlStrip.Text = "ToolStrip1"
+		'
+		'tsbNewFile
+		'
+		Me.tsbNewFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+		Me.tsbNewFile.Image = CType(resources.GetObject("tsbNewFile.Image"), System.Drawing.Image)
+		Me.tsbNewFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+		Me.tsbNewFile.ImageTransparentColor = System.Drawing.Color.Magenta
+		Me.tsbNewFile.Name = "tsbNewFile"
+		Me.tsbNewFile.Size = New System.Drawing.Size(69, 20)
+		Me.tsbNewFile.Text = "Open"
 		'
 		'tsbOpenFile
 		'
 		Me.tsbOpenFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
 		Me.tsbOpenFile.Image = CType(resources.GetObject("tsbOpenFile.Image"), System.Drawing.Image)
+		Me.tsbOpenFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
 		Me.tsbOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta
 		Me.tsbOpenFile.Name = "tsbOpenFile"
-		Me.tsbOpenFile.Size = New System.Drawing.Size(69, 52)
-		Me.tsbOpenFile.Text = "Open"
-		'
-		'tsbOpenFolder
-		'
-		Me.tsbOpenFolder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-		Me.tsbOpenFolder.Image = CType(resources.GetObject("tsbOpenFolder.Image"), System.Drawing.Image)
-		Me.tsbOpenFolder.ImageTransparentColor = System.Drawing.Color.Magenta
-		Me.tsbOpenFolder.Name = "tsbOpenFolder"
-		Me.tsbOpenFolder.Size = New System.Drawing.Size(69, 52)
-		Me.tsbOpenFolder.Text = " Open Folder"
+		Me.tsbOpenFile.Size = New System.Drawing.Size(69, 20)
+		Me.tsbOpenFile.Text = " Open Folder"
 		'
 		'tsbSaveFile
 		'
 		Me.tsbSaveFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
 		Me.tsbSaveFile.Image = CType(resources.GetObject("tsbSaveFile.Image"), System.Drawing.Image)
+		Me.tsbSaveFile.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
 		Me.tsbSaveFile.ImageTransparentColor = System.Drawing.Color.Magenta
 		Me.tsbSaveFile.Name = "tsbSaveFile"
-		Me.tsbSaveFile.Size = New System.Drawing.Size(69, 52)
+		Me.tsbSaveFile.Size = New System.Drawing.Size(69, 20)
 		Me.tsbSaveFile.Text = "Save File"
 		'
 		'ParentForm
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(19.0!, 37.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-		Me.ClientSize = New System.Drawing.Size(1404, 857)
+		Me.ClientSize = New System.Drawing.Size(2006, 1126)
 		Me.Controls.Add(Me.tlStrip)
 		Me.Controls.Add(Me.staStrip)
 		Me.Controls.Add(Me.menuStrip)
 		Me.IsMdiContainer = True
 		Me.MainMenuStrip = Me.menuStrip
 		Me.Margin = New System.Windows.Forms.Padding(10, 9, 10, 9)
-		Me.MinimumSize = New System.Drawing.Size(1440, 960)
+		Me.MinimumSize = New System.Drawing.Size(2042, 1229)
 		Me.Name = "ParentForm"
 		Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
 		Me.Text = "Multi-Document Text Editor 2.0"
@@ -311,8 +315,8 @@ Partial Class ParentForm
 	Friend WithEvents ttpHelp As ToolTip
 	Friend WithEvents tlStrip As ToolStrip
 	Friend WithEvents lblStatus As ToolStripStatusLabel
+	Friend WithEvents tsbNewFile As ToolStripButton
 	Friend WithEvents tsbOpenFile As ToolStripButton
-	Friend WithEvents tsbOpenFolder As ToolStripButton
 	Friend WithEvents tsbSaveFile As ToolStripButton
 
 End Class
