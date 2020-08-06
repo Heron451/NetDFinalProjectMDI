@@ -24,8 +24,6 @@ Public Class ParentForm
 	Dim docLocation As String = String.Empty 'This is a variable to hold the file location
 	Dim docName As String  'This holds the document name
 	Dim txtEdit As String = "Multi-Document Text Editor 2.0 - " 'This variable holds the name of the application for the title bar
-
-
 #End Region
 
 #Region "Event Handlers"
@@ -155,10 +153,6 @@ Public Class ParentForm
 			docLocation = Me.ActiveMdiChild.Text
 		End If
 	End Sub
-
-
-
-
 
 #End Region
 
