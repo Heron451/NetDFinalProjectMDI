@@ -58,7 +58,6 @@ Partial Class ParentForm
 		'
 		'menuStrip
 		'
-		Me.menuStrip.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
 		Me.menuStrip.ImageScalingSize = New System.Drawing.Size(48, 48)
 		Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuWindows, Me.mnuHelp})
 		Me.menuStrip.Location = New System.Drawing.Point(0, 0)
@@ -243,7 +242,7 @@ Partial Class ParentForm
 		Me.tsbNewFile.ImageTransparentColor = System.Drawing.Color.Magenta
 		Me.tsbNewFile.Name = "tsbNewFile"
 		Me.tsbNewFile.Size = New System.Drawing.Size(69, 20)
-		Me.tsbNewFile.Text = "Open"
+		Me.tsbNewFile.Text = "New File"
 		'
 		'tsbOpenFile
 		'
@@ -253,7 +252,7 @@ Partial Class ParentForm
 		Me.tsbOpenFile.ImageTransparentColor = System.Drawing.Color.Magenta
 		Me.tsbOpenFile.Name = "tsbOpenFile"
 		Me.tsbOpenFile.Size = New System.Drawing.Size(69, 20)
-		Me.tsbOpenFile.Text = " Open Folder"
+		Me.tsbOpenFile.Text = "Open File"
 		'
 		'tsbSaveFile
 		'
