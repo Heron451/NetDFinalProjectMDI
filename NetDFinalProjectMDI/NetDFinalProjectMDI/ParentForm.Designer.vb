@@ -58,6 +58,7 @@ Partial Class ParentForm
 		'
 		'menuStrip
 		'
+		Me.menuStrip.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
 		Me.menuStrip.ImageScalingSize = New System.Drawing.Size(48, 48)
 		Me.menuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuFile, Me.mnuEdit, Me.mnuWindows, Me.mnuHelp})
 		Me.menuStrip.Location = New System.Drawing.Point(0, 0)
